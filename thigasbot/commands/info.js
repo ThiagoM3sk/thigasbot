@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { twitter, author, prefix, versao } = require('../config.json')
+const { twitter, author, prefix, versao, github } = require('../config.json')
 exports.run = async (client, message, args) =>{
         const server = message.guild.name
         const embed = new Discord.MessageEmbed()
@@ -9,9 +9,9 @@ exports.run = async (client, message, args) =>{
     .addField('Dev:', `${author}`)
     .addField('Desenvolvido com:', 'discord.js')
     .addField('Versão:', `${versao}`)
-    .addField('For more info, access:', `[Github](https://github.com/${twitter})`)
+    .addField('For more info, access:', `[Github](https://github.com/${github})`)
     .addField('Twitter:', `[Siga](https://twitter.com/${twitter})`)
-    .setFooter(`Siga ${twitter} no Twitter`)
+    .setFooter(`Siga ${github} no Github & ${twitter} no Twitter`)
     .setTimestamp()
   
     await message.channel.send(embed) 
